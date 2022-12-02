@@ -16,7 +16,8 @@ function App() {
     const [counter, setCounter] = useState(0)
 
     const cartCounter =
-        <div className={`${counter === 0 ? "opacity-0 duration-500 cursor-default" : "opacity-100 bg-red-800 duration-500"} 
+        <div
+            className={`${counter === 0 ? "opacity-0 duration-500 cursor-default" : "opacity-100 bg-red-800 duration-500"} 
         rounded-full h-6 w-6 absolute top-1 right-10 flex justify-center items-center text-sm text-center bg-red-700 text-white font-bold`}>
             {counter}
         </div>
@@ -41,24 +42,28 @@ function App() {
     }, [produits, productId, color, totalImgItems])
 
     return (
-        <div className="md:w-4/5 flex flex-col md:flex md:justify-start align-middle min-h-screen mx-auto">
-
-            <Navbar cartCounter={cartCounter}/>
-            <div className="h-full flex flex-col-reverse md:flex-row md:justify-evenly md:mt-5 flex-wrap">
-                <Product
-                    displayedImage={displayedImage}
-                    productId={productId}
-                    setProductId={setProductId}
-                    longueur={totalImgItems}
-                    color={color}/>
-                <Sidebar
-                    setProductId={setProductId}
-                    sidebarImg={sidebarImg}
-                    setSidebarImg={setSidebarImg}
-                    produits={produits}
-                    setColor={setColor}
-                    counter={counter}
-                    setCounter={setCounter}/>
+        <div className="w-full min-h-screen">
+            <div className="md:w-4/5 flex flex-col md:min-h-[95vh] md:flex md:justify-start items-center mx-auto">
+                <Navbar cartCounter={cartCounter}/>
+                <div className="h-full flex flex-col-reverse md:flex-row md:justify-evenly md:mt-5 flex-wrap">
+                    <Product
+                        displayedImage={displayedImage}
+                        productId={productId}
+                        setProductId={setProductId}
+                        longueur={totalImgItems}
+                        color={color}/>
+                    <Sidebar
+                        setProductId={setProductId}
+                        productId={productId}
+                        sidebarImg={sidebarImg}
+                        setSidebarImg={setSidebarImg}
+                        produits={produits}
+                        setColor={setColor}
+                        counter={counter}
+                        setCounter={setCounter}
+                        displayedImage={displayedImage}
+                        longueur={totalImgItems}/>
+                </div>
             </div>
             <Footer/>
         </div>

@@ -4,6 +4,7 @@ import ColorRectangle from "./ColorRectangle";
 import ButtonAddToCart from "./ButtonAddToCart";
 import ButtonPayPal from "./ButtonPayPal";
 import ButtonEmptyCart from "./ButtonEmptyCart";
+import PhotoSlider from "./PhotoSlider";
 
 const Sidebar = ({
                      produits,
@@ -12,7 +13,8 @@ const Sidebar = ({
                      sidebarImg,
                      setSidebarImg,
                      setCounter,
-                     counter
+                     counter,
+                     displayedImage, productId, longueur, color
                  }) => {
 
     const handleAddToCart = () => {
@@ -32,7 +34,14 @@ const Sidebar = ({
             <h1 className="text-2xl title font-bold text-center md:pt-0 pt-3 mb-5 md:mb-10 couleurSignature">MyShirt
                 Essentials</h1>
             <div className="w-full flex justify-center items-center bg-white py-2 rounded-xl">
-                <img className="rounded-xl h-[300px]" src={sidebarImg} alt="chemise écossais"/>
+                <img className="hidden md:block rounded-xl h-[300px]" src={sidebarImg} alt="chemise écossais"/>
+                <div className="md:hidden">
+                    <PhotoSlider displayedImage={displayedImage}
+                                 productId={productId}
+                                 setProductId={setProductId}
+                                 longueur={longueur}
+                                 color={color}/>
+                </div>
             </div>
             <h2 className="text-2xl mt-2 font-bold title couleurSignature">59,90€ HT</h2>
             <h2 className="text-base font-bold title line-through">79,90€ HT</h2>

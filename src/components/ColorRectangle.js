@@ -25,7 +25,7 @@ const ColorRectangle = ({
     }
 
     return (
-        <div className="flex justify-evenly w-2/3 md:w-1/2 mb-3">
+        <div className="flex justify-evenly w-2/3 md:w-3/4 mb-3">
             <div onClick={handleYellowColor}
                  className="
                         h-10 w-12
