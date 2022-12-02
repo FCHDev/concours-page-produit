@@ -1,35 +1,46 @@
-import React from 'react';
-import {v4} from "uuid"
+import { useState } from 'react'
+import { RadioGroup } from '@headlessui/react'
 
-const SizeRectangle = ({tailles}) => {
-    // console.log([tailles])
+const sizeOptions = [
+    { name: 'XS', inStock: true },
+    { name: 'S', inStock: true },
+    { name: 'M', inStock: true },
+    { name: 'L', inStock: true },
+    { name: 'XL', inStock: true },
+    { name: 'XXL', inStock: false },
+]
+
+function classNames(...classes) {
+    return classes.filter(Boolean).join(' ')
+}
+
+export default function SizeRectangle() {
+    const [mem, setMem] = useState(sizeOptions[2])
+
     return (
-        <div className="w-[90%] flex justify-evenly">
-            {tailles.map(el => (
-                <div className="
-                        h-10 w-12 text-center
-                        flex justify-center items-center
-                        rounded-xl
-                        bg-[#D3D3D3]
-                        cursor-pointer
-                        hover:bg-[#AF1B3F]
-                        hover:text-white
-                        hover:font-bold
-                        after:bg-[#AF1B3F]
-                        after:text-white
-                        after:font-bold
-                        active:bg-[#AF1B3F]
-                        active:text-white
-                        active:font-bold
-                        mt-1"
-                     key={v4()}>
-                    {el}
+        <RadioGroup value={mem} onChange={setMem} className="mt-2">
+                <RadioGroup.Label className="sr-only"> Choose a memory option </RadioGroup.Label>
+                <div className="grid gap-3 grid-cols-6">
+                    {sizeOptions.map((option) => (
+                        <RadioGroup.Option
+                            key={option.name}
+                            value={option}
+                            className={({ active, checked }) =>
+                                classNames(
+                                    option.inStock ? 'cursor-pointer focus:outline-none' : 'opacity-25 cursor-not-allowed',
+                                    active ? 'ring-2 ring-offset-2 ring-[#AF1B3F]' : '',
+                                    checked
+                                        ? 'bg-[#AF1B3F] border-transparent text-white hover:bg-[#AF1B3F]'
+                                        : 'bg-white border-gray-200 text-gray-900 hover:bg-gray-50',
+                                    'border rounded-md py-3 px-3 flex items-center justify-center text-sm font-medium uppercase sm:flex-1'
+                                )
+                            }
+                            disabled={!option.inStock}
+                        >
+                            <RadioGroup.Label as="span">{option.name}</RadioGroup.Label>
+                        </RadioGroup.Option>
+                    ))}
                 </div>
-            ))}
-
-        </div>
-
-    );
-};
-
-export default SizeRectangle;
+            </RadioGroup>
+    )
+}

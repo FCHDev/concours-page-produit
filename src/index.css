@@ -26,3 +26,13 @@ body {
     text-decoration: underline;
     cursor: pointer;
 }
+
+.selected {
+    background: black;
+    color: white;
+}
+
+.unselected {
+    background: white;
+    color: black;
+}

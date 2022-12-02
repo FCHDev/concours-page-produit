@@ -68,5 +68,40 @@
       "color": "blue",
       "url": "images/bleu/05.jpg"
     }
+  },
+  {
+    "id": 11,
+    "data": {
+      "color": "gray",
+      "url": "images/gris/01.jpg"
+    }
+  },
+  {
+    "id": 12,
+    "data": {
+      "color": "gray",
+      "url": "images/gris/02.jpg"
+    }
+  },
+  {
+    "id": 13,
+    "data": {
+      "color": "gray",
+      "url": "images/gris/03.jpg"
+    }
+  },
+  {
+    "id": 14,
+    "data": {
+      "color": "gray",
+      "url": "images/gris/04.jpg"
+    }
+  },
+  {
+    "id": 15,
+    "data": {
+      "color": "gray",
+      "url": "images/gris/05.jpg"
+    }
   }
 ]

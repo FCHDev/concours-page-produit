@@ -28,9 +28,13 @@ function App() {
             setDisplayedImage(produits[0].data.url)
             setProductId(0)
         }
-        if (productId > totalImgItems && color === "blue") {
-            setDisplayedImage(produits[totalImgItems].data.url)
+        if (productId > 9 && color === "blue") {
+            setDisplayedImage(produits[5].data.url)
             setProductId(5)
+        }
+        if (productId > totalImgItems && color === "gray") {
+            setDisplayedImage(produits[totalImgItems].data.url)
+            setProductId(10)
         }
         // Rendu de la première image vue
         setDisplayedImage(produits[productId].data.url)

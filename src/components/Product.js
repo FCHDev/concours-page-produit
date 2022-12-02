@@ -6,13 +6,15 @@ const Product = ({displayedImage, productId, setProductId, longueur, color}) => 
         if (productId === 0) {
             setProductId(4)
         } else if (productId === 5) {
+            setProductId(9)
+        } else if (productId === 10) {
             setProductId(longueur)
         } else {
             setProductId(productId - 1)
         }
     }
     const handleNext = () => {
-        productId === longueur ? setProductId(5)
+        productId === longueur ? setProductId(11)
             : setProductId(productId + 1)
     }
 

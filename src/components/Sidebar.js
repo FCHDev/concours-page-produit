@@ -15,8 +15,6 @@ const Sidebar = ({
                      counter
                  }) => {
 
-    const tailles = ["XS", "S", "M", "L", "XL", "XXL"]
-
     const handleAddToCart = () => {
         setCounter(counter + 1)
     }
@@ -38,14 +36,14 @@ const Sidebar = ({
             </div>
             <h2 className="text-2xl mt-2 font-bold title couleurSignature">59,90€ HT</h2>
             <h2 className="text-base font-bold title line-through">79,90€ HT</h2>
-            <h3 className="mt-4">COULEUR</h3>
+            <h3 className="text-base mt-4">COULEUR</h3>
             <ColorRectangle
                 setProductId={setProductId}
                 setColor={setColor}
                 produits={produits}
                 setSidebarImg={setSidebarImg}/>
-            <h3 className="mt-2">TAILLE</h3>
-            <SizeRectangle tailles={tailles}></SizeRectangle>
+            <h3 className="text-base mt-2">TAILLE</h3>
+            <SizeRectangle></SizeRectangle>
             <ButtonAddToCart hanldeAddToCart={handleAddToCart}/>
             <ButtonPayPal/>
             <ButtonEmptyCart counter={counter} handleReset={handleReset}/>

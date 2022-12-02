@@ -16,11 +16,16 @@ const ColorRectangle = ({
         setSidebarImg(produits[8].data.url)
         setProductId(5)
         setColor("blue")
-        console.log("prout")
+    }
+
+    const handleGrayColor = () => {
+        setSidebarImg(produits[14].data.url)
+        setProductId(10)
+        setColor("gray")
     }
 
     return (
-        <div className="flex justify-evenly w-2/3 md:w-1/3 mb-3">
+        <div className="flex justify-evenly w-2/3 md:w-1/2 mb-3">
             <div onClick={handleYellowColor}
                  className="
                         h-10 w-12
@@ -39,6 +44,17 @@ const ColorRectangle = ({
                         flex justify-center items-center
                         rounded-xl
                         bg-[#222737]
+                        cursor-pointer
+                        mt-1"
+            >
+            </div>
+            <div onClick={handleGrayColor}
+                 className="
+                        h-10 w-12
+                        text-center
+                        flex justify-center items-center
+                        rounded-xl
+                        bg-gray-500
                         cursor-pointer
                         mt-1"
             >
