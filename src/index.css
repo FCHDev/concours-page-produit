@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Kanit&family=Lobster&family=Noto+Sans+JP:wght@400;900&family=Poppins&family=Prompt&family=Roboto+Mono&family=Sono&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background: white;
+    /*background: #F5F3F4;*/
+    font-family: 'Poppins', sans-serif;
+}
+
+.title {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.couleurSignature {
+    color: #AF1B3F;
+}
+
+.test {
+    font-style: normal;
+}
+.test:nth-child(2) {
+    color: #AF1B3F;
+    text-decoration: underline;
+    cursor: pointer;
+}
