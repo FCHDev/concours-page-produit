@@ -37,7 +37,7 @@ function App() {
     }, [produits, productId, color, totalImgItems])
 
     return (
-        <div className="md:w-4/5 flex flex-col md:flex md:justify-start align-middle min-h-screen mx-auto border">
+        <div className="md:w-4/5 flex flex-col md:flex md:justify-start align-middle min-h-screen mx-auto">
 
             <Navbar cartCounter={cartCounter}/>
             <div className="h-full flex flex-col-reverse md:flex-row md:justify-evenly md:mt-5 flex-wrap">
