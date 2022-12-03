@@ -5,7 +5,7 @@ const Navbar = ({cartCounter}) => {
     const menuItems = ["Accueil", "Catalogue", "Contact", "À propos"]
 
     return (
-        <div className="w-full hidden h-16 md:flex rounded-xl md:mt-3 md:mb-6 px-3 md:px-0">
+        <div className="w-full hidden h-16 md:flex rounded-xl md:my-3 px-3 md:px-0">
             <ul className="flex h-full text-white md:w-3/4 md:mx-auto md:justify-evenly justify-between items-center">
                 {menuItems.map(item => (
                     <li key={v4()} className="md:text-2xl text-base cursor-pointer font-[Poppins] font-bold test text-gray-800">{item}</li>

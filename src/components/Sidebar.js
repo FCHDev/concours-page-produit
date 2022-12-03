@@ -4,7 +4,8 @@ import ColorRectangle from "./ColorRectangle";
 import ButtonAddToCart from "./ButtonAddToCart";
 import ButtonPayPal from "./ButtonPayPal";
 import ButtonEmptyCart from "./ButtonEmptyCart";
-import PhotoSlider from "./PhotoSlider";
+// import PhotoSlider from "./PhotoSlider";
+import SwiperComp from "./Swiper";
 
 const Sidebar = ({
                      produits,
@@ -14,7 +15,7 @@ const Sidebar = ({
                      setSidebarImg,
                      setCounter,
                      counter,
-                     displayedImage, productId, longueur, color
+                     color
                  }) => {
 
     const handleAddToCart = () => {
@@ -30,27 +31,28 @@ const Sidebar = ({
     }, [produits, setSidebarImg])
 
     return (
-        <div className="md:w-1/4 min-h-screen flex flex-col md:items-start items-center md:h-4/5 md:p-2 ">
+        <div className="md:w-1/4 w-full min-h-screen flex flex-col md:items-start items-center md:h-4/5 md:p-2 ">
             <h1 className="text-2xl md:block hidden title font-bold text-center md:pt-0 pt-3 mb-5 md:mb-10 couleurSignature">MyShirt
                 Essentials</h1>
             <div className="w-full flex justify-center items-center bg-white md:py-2 rounded-xl">
                 <img className="hidden md:block rounded-xl md:h-[300px]" src={sidebarImg} alt="chemise écossais"/>
-                <div className="md:hidden w-full">
-                    <PhotoSlider displayedImage={displayedImage}
-                                 productId={productId}
-                                 setProductId={setProductId}
-                                 longueur={longueur}
-                                 color={color}/>
-                </div>
+                {/*<div className="md:hidden w-full">*/}
+                {/*    <PhotoSlider displayedImage={displayedImage}*/}
+                {/*                 productId={productId}*/}
+                {/*                 setProductId={setProductId}*/}
+                {/*                 longueur={longueur}*/}
+                {/*                 color={color}/>*/}
+                {/*</div>*/}
+                <SwiperComp color={color}/>
             </div>
 
-            <div className="w-full flex flex-col-reverse">
-                <div className="flex flex-col mb-3">
+            <div className="w-full flex flex-col-reverse md:flex-col">
+                <div className="flex flex-col mb-3 md:mb-0">
                     <h2 className="text-2xl text-center mt-2 font-bold title couleurSignature">59,90€ HT</h2>
                     <h2 className="text-base text-center font-bold title line-through">79,90€ HT</h2>
                 </div>
-                <div className="w-full flex flex-col items-center">
-                    <h3 className="text-base text-center md:block hidden md:mt-4">COULEUR</h3>
+                <div className="w-full flex flex-col">
+                    <h3 className="text-base md:block hidden md:mt-4">COULEUR</h3>
                     <ColorRectangle
                         setProductId={setProductId}
                         setColor={setColor}
@@ -58,7 +60,7 @@ const Sidebar = ({
                         setSidebarImg={setSidebarImg}/>
                 </div>
             </div>
-            <h3 className="text-base mt-2">TAILLE</h3>
+            <h3 className="text-base mt-2 md:mt-0">TAILLE</h3>
             <SizeRectangle/>
             <ButtonAddToCart hanldeAddToCart={handleAddToCart}/>
             <ButtonPayPal/>

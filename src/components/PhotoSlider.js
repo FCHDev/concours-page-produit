@@ -20,8 +20,16 @@ const PhotoSlider = ({displayedImage, productId, setProductId, longueur, color})
 
 
     return (
-        <div>
-            <div className="md:h-2/5 h-full w-full flex flex-col justify-center items-center bg-white md:py-2 rounded-xl md:mb-0 mb-5">
+
+            <div className="md:h-2/5
+            h-full
+            w-full
+            flex flex-col justify-center items-center
+            bg-white
+            rounded-xl
+            md:py-2
+            md:mb-0
+            mb-5">
                 {/*<h1 className="text-2xl title font-bold text-center mb-1 couleurSignature">MyShirt Essentials</h1>*/}
                 <span className="capitalize m-0 md:mb-6">{color}</span>
 
@@ -30,7 +38,7 @@ const PhotoSlider = ({displayedImage, productId, setProductId, longueur, color})
                          onClick={handlePrevious}>
                         <img className="md:min-h-[50px] h-[50px] md:w-full md:mx-auto"
                              src="/images/left-arrow.svg"
-                             alt=""/>
+                             alt="previous"/>
                     </div>
                     <img className="md:rounded-xl md:h-[550px] h-[76vh] w-full object-cover md:object-contain md:mx-auto md:my-2"
                          src={displayedImage}
@@ -41,11 +49,11 @@ const PhotoSlider = ({displayedImage, productId, setProductId, longueur, color})
                          onClick={handleNext}>
                         <img className="md:min-h-[50px] h-[50px] md:w-full md:mx-auto"
                              src="/images/right-arrow.svg"
-                             alt=""/>
+                             alt="next"/>
                     </div>
                 </div>
             </div>
-        </div>
+
     );
 };
 

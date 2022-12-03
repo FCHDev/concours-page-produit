@@ -42,10 +42,14 @@ function App() {
     }, [produits, productId, color, totalImgItems])
 
     return (
-        <div className="w-full min-h-screen">
-            <div className="md:w-4/5 flex flex-col md:min-h-[95vh] md:flex md:justify-start items-center mx-auto">
+        <div className="container w-full min-h-screen mx-auto">
+            <div className="md:w-4/5 w-full flex flex-col md:min-h-[95vh] md:flex md:justify-start items-center mx-auto">
                 <Navbar cartCounter={cartCounter}/>
-                <div className="h-full flex flex-col-reverse md:flex-row md:justify-evenly md:mt-5 flex-wrap">
+                <div className="h-full w-full mx-auto
+                flex flex-col-reverse items-center
+                md:flex-row
+                md:justify-evenly
+                flex-wrap">
                     <Product
                         displayedImage={displayedImage}
                         productId={productId}
@@ -59,13 +63,14 @@ function App() {
                         setSidebarImg={setSidebarImg}
                         produits={produits}
                         setColor={setColor}
+                        color={color}
                         counter={counter}
                         setCounter={setCounter}
                         displayedImage={displayedImage}
                         longueur={totalImgItems}/>
                 </div>
-            </div>
             <Footer/>
+            </div>
         </div>
     );
 }
