@@ -32,7 +32,7 @@ const PhotoSlider = ({displayedImage, productId, setProductId, longueur, color})
                              src="/images/left-arrow.svg"
                              alt=""/>
                     </div>
-                    <img className="md:rounded-xl md:h-[550px] h-[80vh] w-full object-cover md:object-contain md:mx-auto md:my-2"
+                    <img className="md:rounded-xl md:h-[550px] h-[76vh] w-full object-cover md:object-contain md:mx-auto md:my-2"
                          src={displayedImage}
                          alt="chemise écossais"
                     />
