@@ -30,12 +30,12 @@ const Sidebar = ({
     }, [produits, setSidebarImg])
 
     return (
-        <div className="md:w-1/4 h-screen flex flex-col md:items-start items-center md:h-4/5 p-2 ">
-            <h1 className="text-2xl title font-bold text-center md:pt-0 pt-3 mb-5 md:mb-10 couleurSignature">MyShirt
+        <div className="md:w-1/4 min-h-screen flex flex-col md:items-start items-center md:h-4/5 md:p-2 ">
+            <h1 className="text-2xl md:block hidden title font-bold text-center md:pt-0 pt-3 mb-5 md:mb-10 couleurSignature">MyShirt
                 Essentials</h1>
-            <div className="w-full flex justify-center items-center bg-white py-2 rounded-xl">
-                <img className="hidden md:block rounded-xl h-[300px]" src={sidebarImg} alt="chemise écossais"/>
-                <div className="md:hidden">
+            <div className="w-full flex justify-center items-center bg-white md:py-2 rounded-xl">
+                <img className="hidden md:block rounded-xl md:h-[300px]" src={sidebarImg} alt="chemise écossais"/>
+                <div className="md:hidden w-full">
                     <PhotoSlider displayedImage={displayedImage}
                                  productId={productId}
                                  setProductId={setProductId}
@@ -43,16 +43,23 @@ const Sidebar = ({
                                  color={color}/>
                 </div>
             </div>
-            <h2 className="text-2xl mt-2 font-bold title couleurSignature">59,90€ HT</h2>
-            <h2 className="text-base font-bold title line-through">79,90€ HT</h2>
-            <h3 className="text-base mt-4">COULEUR</h3>
-            <ColorRectangle
-                setProductId={setProductId}
-                setColor={setColor}
-                produits={produits}
-                setSidebarImg={setSidebarImg}/>
+
+            <div className="w-full flex flex-col-reverse">
+                <div className="flex flex-col mb-3">
+                    <h2 className="text-2xl text-center mt-2 font-bold title couleurSignature">59,90€ HT</h2>
+                    <h2 className="text-base text-center font-bold title line-through">79,90€ HT</h2>
+                </div>
+                <div className="w-full flex flex-col items-center">
+                    <h3 className="text-base text-center md:block hidden md:mt-4">COULEUR</h3>
+                    <ColorRectangle
+                        setProductId={setProductId}
+                        setColor={setColor}
+                        produits={produits}
+                        setSidebarImg={setSidebarImg}/>
+                </div>
+            </div>
             <h3 className="text-base mt-2">TAILLE</h3>
-            <SizeRectangle></SizeRectangle>
+            <SizeRectangle/>
             <ButtonAddToCart hanldeAddToCart={handleAddToCart}/>
             <ButtonPayPal/>
             <ButtonEmptyCart counter={counter} handleReset={handleReset}/>

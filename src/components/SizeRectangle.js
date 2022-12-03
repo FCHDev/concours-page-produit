@@ -18,7 +18,7 @@ export default function SizeRectangle() {
     const [mem, setMem] = useState(sizeOptions[2])
 
     return (
-        <RadioGroup value={mem} onChange={setMem} className="mt-2">
+        <RadioGroup value={mem} onChange={setMem} className="mt-2 md:mb-0 mb-5">
                 <RadioGroup.Label className="sr-only"> Choose a memory option </RadioGroup.Label>
                 <div className="grid gap-3 grid-cols-6">
                     {sizeOptions.map((option) => (

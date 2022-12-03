@@ -20,7 +20,7 @@ const Product = ({displayedImage, productId, setProductId, longueur, color}) => 
             </div>
 
             {/*Partie Description produit*/}
-            <div className="max-h-3/5 p-2">
+            <div className="max-h-3/5 p-2 md:mb-0 mb-3">
                 <h2 className="text-xl font-bold md:mt-3 mt-5 title couleurSignature">
                     DESCRIPTION
                 </h2>

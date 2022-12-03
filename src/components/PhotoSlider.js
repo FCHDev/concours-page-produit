@@ -21,24 +21,23 @@ const PhotoSlider = ({displayedImage, productId, setProductId, longueur, color})
 
     return (
         <div>
-            <div className="h-2/5 w-full flex flex-col justify-center items-center bg-white py-2 rounded-xl">
+            <div className="md:h-2/5 h-full w-full flex flex-col justify-center items-center bg-white md:py-2 rounded-xl md:mb-0 mb-5">
                 {/*<h1 className="text-2xl title font-bold text-center mb-1 couleurSignature">MyShirt Essentials</h1>*/}
                 <span className="capitalize m-0 md:mb-6">{color}</span>
 
                 <div className="w-full flex justify-evenly items-center">
-                    <div className="md:relative absolute -left-4 md:top-0 md:right-0  p-3 rounded-xl cursor-pointer w-24 text-center"
+                    <div className="md:relative absolute -left-4 md:top-0 md:right-0 p-3 rounded-xl cursor-pointer w-24 text-center"
                          onClick={handlePrevious}>
                         <img className="md:min-h-[50px] h-[50px] md:w-full md:mx-auto"
                              src="/images/left-arrow.svg"
                              alt=""/>
                     </div>
-                    <img className="rounded-xl md:h-[550px] h-[380px] mx-auto my-2"
+                    <img className="md:rounded-xl md:h-[550px] h-[80vh] w-full object-cover md:object-contain md:mx-auto md:my-2"
                          src={displayedImage}
                          alt="chemise écossais"
-                         // onClick={handleNext}
                     />
 
-                    <div className="md:relative absolute -right-9 md:top-0 md:right-0  p-3 rounded-xl cursor-pointer w-24 text-center"
+                    <div className="md:relative absolute -right-9 md:top-0 md:right-0 p-3 rounded-xl cursor-pointer w-24 text-center"
                          onClick={handleNext}>
                         <img className="md:min-h-[50px] h-[50px] md:w-full md:mx-auto"
                              src="/images/right-arrow.svg"

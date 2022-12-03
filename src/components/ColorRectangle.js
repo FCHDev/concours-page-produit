@@ -32,7 +32,8 @@ const ColorRectangle = ({
                         text-center
                         flex justify-center items-center
                         rounded-xl
-                        bg-[#ebc114]
+                        {/*bg-[#ebc114]*/}
+                        myclass2
                         cursor-pointer
                         mt-1"
             >
@@ -43,7 +44,8 @@ const ColorRectangle = ({
                         text-center
                         flex justify-center items-center
                         rounded-xl
-                        bg-[#222737]
+                        {/*bg-[#222737]*/}
+                        myclass
                         cursor-pointer
                         mt-1"
             >
@@ -55,6 +57,7 @@ const ColorRectangle = ({
                         flex justify-center items-center
                         rounded-xl
                         bg-gray-500
+                        myclass3
                         cursor-pointer
                         mt-1"
             >
