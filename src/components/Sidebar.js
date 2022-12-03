@@ -31,7 +31,7 @@ const Sidebar = ({
     }, [produits, setSidebarImg])
 
     return (
-        <div className="md:w-1/4 w-full min-h-screen flex flex-col md:items-start items-center md:h-4/5 md:p-2 ">
+        <div className="md:w-1/4 w-full md:h-full min-h-screen flex flex-col md:items-start items-center md:h-4/5 md:p-2 ">
             <h1 className="text-2xl md:block hidden title font-bold text-center md:pt-0 pt-3 mb-5 md:mb-10 couleurSignature">MyShirt
                 Essentials</h1>
             <div className="w-full flex justify-center items-center bg-white md:py-2 rounded-xl">
@@ -48,7 +48,7 @@ const Sidebar = ({
 
             <div className="w-full flex flex-col-reverse md:flex-col">
                 <div className="flex flex-col mb-3 md:mb-0">
-                    <h2 className="text-2xl text-center mt-2 font-bold title couleurSignature">59,90€ HT</h2>
+                    <h2 className="text-2xl text-center md:mt-2 font-bold title couleurSignature">59,90€ HT</h2>
                     <h2 className="text-base text-center font-bold title line-through">79,90€ HT</h2>
                 </div>
                 <div className="w-full flex flex-col">
