@@ -9,11 +9,12 @@ import 'swiper/css/pagination'
 
 const SwiperComp = ({color}) => {
     return (
-        <div className="h-[70vh] w-full overflow-hidden mt-5 mb-5 md:hidden bg-black">
+        <div className="h-[70vh] w-full overflow-hidden mt-5 mb-5 md:hidden">
             <Swiper
                 modules={[Pagination]}
                 // navigation={true}
                 pagination={{clickable: true}}
+                longSwipes={false}
                 loop
                 resistance={false}
                 spaceBetween={10}
