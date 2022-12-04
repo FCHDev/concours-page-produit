@@ -48,7 +48,8 @@ function App() {
                 <div className="h-full w-full mx-auto
                 flex flex-col-reverse items-center
                 md:flex-row
-                md:justify-evenly
+                md:justify-center
+                md:items-start
                 flex-wrap">
                     <Product
                         displayedImage={displayedImage}

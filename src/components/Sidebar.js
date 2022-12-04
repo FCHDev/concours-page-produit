@@ -31,25 +31,28 @@ const Sidebar = ({
     }, [produits, setSidebarImg])
 
     return (
-        <div className="md:w-1/4 w-full md:h-full min-h-screen flex flex-col md:items-start items-center md:h-4/5 md:p-2 ">
-            <h1 className="text-2xl md:block hidden title font-bold text-center md:pt-0 pt-3 mb-5 md:mb-10 couleurSignature">MyShirt
-                Essentials</h1>
-            <div className="w-full flex justify-center items-center bg-white md:py-2 rounded-xl">
+        <div className="
+        md:w-1/4
+        w-full
+        md:h-4/5
+        md:p-2
+        md:items-start
+        min-h-screen
+        flex flex-col
+        items-center
+        ">
+            <h1 className="text-2xl md:block title font-bold text-center md:pt-0 mb-5 md:mb-2 couleurSignature">
+                MyShirt Essentials
+            </h1>
+            <div className="w-full flex justify-center items-center bg-white md:py-2 md:rounded-xl">
                 <img className="hidden md:block rounded-xl md:h-[300px]" src={sidebarImg} alt="chemise écossais"/>
-                {/*<div className="md:hidden w-full">*/}
-                {/*    <PhotoSlider displayedImage={displayedImage}*/}
-                {/*                 productId={productId}*/}
-                {/*                 setProductId={setProductId}*/}
-                {/*                 longueur={longueur}*/}
-                {/*                 color={color}/>*/}
-                {/*</div>*/}
                 <SwiperComp color={color}/>
             </div>
 
             <div className="w-full flex flex-col-reverse md:flex-col">
                 <div className="flex flex-col mb-3 md:mb-0">
-                    <h2 className="text-2xl text-center md:mt-2 font-bold title couleurSignature">59,90€ HT</h2>
-                    <h2 className="text-base text-center font-bold title line-through">79,90€ HT</h2>
+                    <h2 className="text-2xl text-center md:mt-2 font-bold title couleurPrix">59,90€ HT</h2>
+                    <h2 className="text-base text-center font-bold line-through">79,90€ HT</h2>
                 </div>
                 <div className="w-full flex flex-col">
                     <h3 className="text-base md:block hidden md:mt-4">COULEUR</h3>

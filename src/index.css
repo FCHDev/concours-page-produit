@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Kanit&family=Lobster&family=Noto+Sans+JP:wght@400;900&family=Poppins&family=Prompt&family=Roboto+Mono&family=Sono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alexandria:wght@400;700&family=Kanit&family=Lobster&family=Noto+Sans+JP:wght@400;900&family=Poppins&family=Prompt&family=Roboto+Mono&family=Sono&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -16,24 +16,29 @@
  }
 
 body {
-    /*background: #F5F3F4;*/
-    font-family: 'Poppins', sans-serif;
+    background: #646E78;
+    /*background: #858F99;*/
+    color: white;
+    font-family: 'Alexandria', sans-serif;
 }
 
 .title {
-    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.6rem;
 }
 
 .couleurSignature {
-    color: #AF1B3F;
+    color: #B0E298;
+}
+.couleurPrix {
+    color: #ECDD7B;
 }
 
 .test {
     font-style: normal;
 }
 .test:nth-child(2) {
-    color: #AF1B3F;
-    text-decoration: underline;
+    color: #ECDD7B;
+    font-weight: bold;
     cursor: pointer;
 }
 

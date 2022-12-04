@@ -28,9 +28,9 @@ export default function SizeRectangle() {
                             className={({ active, checked }) =>
                                 classNames(
                                     option.inStock ? 'cursor-pointer focus:outline-none' : 'opacity-25 cursor-not-allowed',
-                                    active ? 'ring-2 ring-offset-2 ring-[#AF1B3F]' : '',
+                                    active ? 'ring-2 ring-offset-2 ring-[#B0E298]' : '',
                                     checked
-                                        ? 'bg-[#AF1B3F] border-transparent text-white hover:bg-[#AF1B3F]'
+                                        ? 'bg-[#B0E298] border-transparent text-gray-900 hover:bg-[#B0E298]'
                                         : 'bg-white border-gray-200 text-gray-900 hover:bg-gray-50',
                                     'border rounded-md py-3 px-3 flex items-center justify-center text-sm font-medium uppercase sm:flex-1'
                                 )
