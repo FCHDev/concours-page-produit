@@ -9,7 +9,7 @@ import 'swiper/css/pagination'
 
 const SwiperComp = ({color}) => {
     return (
-        <div className="h-[70vh] w-full overflow-hidden mt-5 mb-5 md:hidden">
+        <div className="h-[60vh] w-full overflow-hidden mt-5 mb-5 md:hidden">
             <Swiper
                 modules={[Pagination]}
                 // navigation={true}

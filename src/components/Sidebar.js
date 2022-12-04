@@ -41,7 +41,7 @@ const Sidebar = ({
         flex flex-col
         items-center
         ">
-            <h1 className="text-2xl md:block title font-bold text-center md:pt-0 mb-5 md:mb-2 couleurSignature">
+            <h1 className="text-2xl md:block font-bold text-center md:pt-0 mb-5 md:mb-2 couleurSignature">
                 MyShirt Essentials
             </h1>
             <div className="w-full flex justify-center items-center bg-white md:py-2 md:rounded-xl">
