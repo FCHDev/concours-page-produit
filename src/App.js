@@ -58,16 +58,16 @@ function App() {
                         longueur={totalImgItems}
                         color={color}/>
                     <Sidebar
-                        setProductId={setProductId}
                         productId={productId}
+                        setProductId={setProductId}
                         sidebarImg={sidebarImg}
                         setSidebarImg={setSidebarImg}
-                        produits={produits}
-                        setColor={setColor}
-                        color={color}
                         counter={counter}
                         setCounter={setCounter}
+                        color={color}
+                        setColor={setColor}
                         displayedImage={displayedImage}
+                        produits={produits}
                         longueur={totalImgItems}/>
                 </div>
             <Footer/>

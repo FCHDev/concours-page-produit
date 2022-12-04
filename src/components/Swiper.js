@@ -1,16 +1,23 @@
 import React from 'react';
 import {Swiper, SwiperSlide} from 'swiper/react'
+import {Pagination} from 'swiper'
 import 'swiper/css'
-import 'swiper/css/autoplay'
+import 'swiper/css/bundle'
+import 'swiper/css/pagination'
+// import 'swiper/css/effect-fade'
+// import 'swiper/css/navigation';
 
 const SwiperComp = ({color}) => {
     return (
-        <div className="h-[70vh] w-full overflow-hidden mt-5 mb-5 md:hidden">
+        <div className="h-[70vh] w-full overflow-hidden mt-5 mb-5 md:hidden bg-black">
             <Swiper
-                navigation={true}
-                pagination={true}
-                loop={true}
-                autoplay={true}>
+                modules={[Pagination]}
+                // navigation={true}
+                pagination={{clickable: true}}
+                loop
+                resistance={false}
+                spaceBetween={10}
+                slidesPerView={1}>
                 {color === "yellow"
                     ? <><SwiperSlide><img src="/images/jaune/01.jpg" alt=""/></SwiperSlide>
                         <SwiperSlide><img src="/images/jaune/02.jpg" alt=""/></SwiperSlide>
